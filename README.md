@@ -8,6 +8,6 @@ About Managed implementation type with unmanaged or additional save:
 - In the variant with additional save you can add additional logic to the persistence managed by the framework
 - The interaction phase is still managed by the RAP framework in both variants
 
-![kép](https://github.com/attilaberencsi/zrapunmanagedsave/assets/20442467/4d65fc7c-e9d9-41e9-ae9a-64a1d4943811)
+![kép](https://github.com/attilaberencsi/abaprapunmanagedsave/assets/20442467/36bea428-216c-48a7-9ac0-0dc71ec4bb22)
 
 Reference: https://www.sap-press.com/abap-restful-application-programming-model_5647/
