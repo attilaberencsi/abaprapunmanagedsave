@@ -1,0 +1,50 @@
+managed with unmanaged save implementation in class zbp_i_rap_purchaseorder_m unique;
+
+define behavior for ZI_RAP_PurchaseOrder_M alias PurchaseOrder
+lock master
+
+unmanaged
+late numbering
+authorization master ( instance )
+etag master LastChangeDateTime
+{
+  create ( precheck );
+  internal update;
+  delete;
+
+  field ( readonly )
+  PurchaseOrder,
+  PurchaseOrderDate,
+  PurchasingOrganization,
+  PurchasingGroup,
+  Supplier,
+  PurchaseOrderQuantityUnit,
+  Plant,
+  CreatedByUser,
+  LastChangeDateTime,
+  CreationDate;
+
+  field ( mandatory ) Material, OrderQuantity;
+
+  determination initOrgData on modify { create; }
+  determination initMaterialRelatedData on modify { create; }
+
+  validation validatePurchaseOrder on save { create; }
+  validation validateMaterial on save { create; }
+  validation validateOnDelete on save { delete; }
+
+  mapping for bapimepoheader control bapimepoheaderx corresponding
+  {
+    PurchaseOrder = po_number;
+    PurchasingOrganization = purch_org;
+    PurchasingGroup = pur_group;
+    Supplier = vendor;
+  }
+
+  mapping for bapimepoitem corresponding
+  {
+    PurchaseOrderItem = po_item;
+    Material = material;
+    OrderQuantity = quantity;
+  }
+}

@@ -1,0 +1,7 @@
+projection;
+
+define behavior for ZC_RAP_PurchaseOrderOwn_M alias PurchaseOrder
+{
+  use create;
+  use delete;
+}

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRVB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRVB>
+    <METADATA>
+     <NAME>ZUI_RAP_PO_OWN_M_O2</NAME>
+     <VERSION>active</VERSION>
+    </METADATA>
+    <CONTENT>
+     <BIND_TYPE_IMPL>
+      <NAME>ZUI_RAP_PO_OWN_M_O2</NAME>
+     </BIND_TYPE_IMPL>
+     <BIND_TYPE>ODATA</BIND_TYPE>
+     <BIND_TYPE_VERSION>V2</BIND_TYPE_VERSION>
+     <SERVICES>
+      <item>
+       <SERVICE_NAME>ZUI_RAP_PO_OWN_M_O2</SERVICE_NAME>
+       <SERVICE_CONTENT>
+        <item>
+         <SERVICE_VERSION>0001</SERVICE_VERSION>
+         <SRVD_REF>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zrap_po_own_m</URI>
+          <TYPE>SRVD/SRV</TYPE>
+          <NAME>ZRAP_PO_OWN_M</NAME>
+         </SRVD_REF>
+        </item>
+       </SERVICE_CONTENT>
+      </item>
+     </SERVICES>
+    </CONTENT>
+    <PUBLISHED>true</PUBLISHED>
+   </SRVB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

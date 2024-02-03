@@ -1,0 +1,7 @@
+@EndUserText.label: 'CDS-Zugriffskontrolle'
+@MappingRole: true
+define role ZI_RAP_PurchaseOrder_M {
+   grant select on ZI_RAP_PurchaseOrder_M
+   where
+   inheriting conditions from entity I_PurchaseOrderItemAPI01;
+}

@@ -1,0 +1,36 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Meine Bestellung',
+                  typeNamePlural: 'Meine Bestellungen' }
+annotate view ZC_RAP_PurchaseOrderOwn_M with
+{
+
+  @UI.facet: [{ id: 'Identification',
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Bestellung',
+                position: 10,
+                purpose: #STANDARD }]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  PurchaseOrder;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  PurchaseOrderDate;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 20 }]
+  @Consumption.valueHelpDefinition: [{ entity: {
+    name : 'ZI_RAP_PO_MaterialActive_VH',
+    element: 'Material' },
+    additionalBinding: [{ element: 'MaterialBaseUnit',
+                          localElement: 'PurchaseOrderQuantityUnit',
+                          usage: #RESULT }] } ]
+  Material;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  OrderQuantity;
+}

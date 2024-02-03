@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition, Eigene Bestellungen'
+define service ZRAP_PO_Own_M {
+  expose ZC_RAP_PurchaseOrderOwn_M as PurchaseOrder;
+}
