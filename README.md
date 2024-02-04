@@ -1,5 +1,7 @@
 # Managed RAP Scenario with Unmanaged Save
 
+RAP application that’s based on the data model of an existing application and integrates it using its API. To integrate the API, you need to implement the SAVE phase of the save sequence and late numbering yourself.
+
 About Managed implementation type with unmanaged or additional save:
 
 - The implementation types with unmanaged save or additional save represent variants of the managed scenario
